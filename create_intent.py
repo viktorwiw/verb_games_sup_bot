@@ -4,7 +4,7 @@ import logging
 from environs import Env
 from google.api_core.exceptions import InvalidArgument, GoogleAPIError
 from google.cloud import dialogflow
-from requests import exceptions
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
