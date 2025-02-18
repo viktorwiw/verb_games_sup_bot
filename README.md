@@ -1,10 +1,11 @@
 # verb_games_sup_bot
 
-Чат - бот помощник для ответов на типичные вопросы. Бот работает как в Телеграмме так и в
-социальной сети [VK](https://vk.com/)
+Чат-бот для Telegram и [ВКонтакте](https://vk.com/), созданный на основе Google Dialogflow. 
+Бот использует обработку естественного языка (NLP) для понимания запросов пользователей 
+и автоматического ответа.
 
 
-## Как установить
+## Как запустить 
 
 Создайте в корне проекта, файл `.env` Пропишите в нем:
 
@@ -21,7 +22,14 @@ GOOGLE_APPLICATION_CREDENTIALS=ПУТЬ ДО CREDENRIALS.JSON
 `VK_TOKEN` - Создайте сообщество в ВК, токен можно получить в настройках сообщества в разделе `Работа с API - Ключи доступа`
 `PROJECT_ID` - ID проекта в Google Cloud
 СКРИН
-`GOOGLE_APPLICATION_CREDENTIALS` - Путь до credentials.json полученный при запуске и инициализации GoogleCLI
+`GOOGLE_APPLICATION_CREDENTIALS` - Путь до credentials.json полученный при запуске и инициализации GoogleCLI,
+
+Для **Продакшена**, скопируйте файл `GOOGLE_APPLICATION_CREDENTIALS.json` в корень проекта на сервер
+Перейдите в католог, где расположен файл `GOOGLE_APPLICATION_CREDENTIALS.json` на вашем компьютере и выполните  команду
+
+```
+scp ПУТЬ_ДО_ФАЙЛА/GOOGLE_APPLICATION_CREDENTIALS.json root@your-server:/opt/verb_games_sup_bot
+```
 
 Для изоляции проекта рекомендуется развернуть виртуальное окружение:
 
@@ -59,11 +67,12 @@ pip install -r requirements.txt
 НАЗВАНИЕ ВАШЕГО ПРОЕКТА-211973
 ```
 
+
 ### Создайте агента и натренируйте его
 
 Агент - это бот, который будет отвечать на вопросы пользователей и будем использовать его в своих ботах в Телеграмме и в ВК.
 
-Для этого воспользуйтесь [инстркуцией](ttps://cloud.google.com/dialogflow/es/docs/quick/build-agent)
+[Для этого воспользуйтесь инструкцией](https://cloud.google.com/dialogflow/es/docs/quick/build-agent)
 
 Не забудьте выставить русский язык, иначе бот не будет понимать клиентов.
 
@@ -73,15 +82,6 @@ pip install -r requirements.txt
 
 `*СКРИН*`
 
-### Обучение DialogFlow по API
-
-В файле ``question.json`` пример как заполнять вопросы.
-
-Запустите скрипт
-
-```bash
-python create_intent.py
-```
 
 ### Получение токена для работы с API DialogFlow
 
@@ -93,10 +93,16 @@ python create_intent.py
 
 Разархивируйте на компьютер
 
-Перейдите в каталог с разархивированной утилитой и запустите инсталлятор:
+Перейдите в каталог с разархивированной утилитой и запустите инсталлятор
 
 ```bash
 ./google-cloud-sdk/install.sh
+```
+
+Установщик внёс изменения в .bashrc, применяем их:
+
+```bash
+source ~/.bashrc
 ```
 
 Запустите утилиту
@@ -106,20 +112,25 @@ gcloud init
 gcloud auth application-default login
 ```
 
-При запуске попросит верификацию в аккаунт google
+При запуске скрипта, он опросит верификацию в аккаунт google
 
-После вы получите файл credentials.json к себе на компьютер. Каталог будет указан в ответе утилиты
+После вы получите файл credentials.json к себе на компьютер. 
+Папка где располагается файл с токеном будет указан в ответе утилиты
 
 `*СКРИН*`
 
-Добавьте путь до файла `application_default_credentials.json` в переменные окружения, переменная `GOOGLE_APPLICATION_CREDENTIALS`.
+Добавьте путь до файла `application_default_credentials.json` в переменные окружения,
+переменная `GOOGLE_APPLICATION_CREDENTIALS`.
 
-Получите токен от DialogFlow
 
-Запустите скрипт 
+### Обучение DialogFlow по API
+
+В файле `question.json` пример как заполнять вопросы.
+
+Запустите скрипт
 
 ```bash
-python get_token_dialog_flow.py
+python create_intent.py
 ```
 
 
