@@ -19,9 +19,12 @@ GOOGLE_APPLICATION_CREDENTIALS=ПУТЬ ДО CREDENRIALS.JSON
 где:
 
 `TG_TOKEN` - получить при создании телеграм бота в боте [BotFather](https://t.me/BotFather)
+
 `VK_TOKEN` - Создайте сообщество в ВК, токен можно получить в настройках сообщества в разделе `Работа с API - Ключи доступа`
+
 `PROJECT_ID` - ID проекта в Google Cloud
 СКРИН
+
 `GOOGLE_APPLICATION_CREDENTIALS` - Путь до credentials.json полученный при запуске и инициализации GoogleCLI,
 
 Для **Продакшена**, скопируйте файл `GOOGLE_APPLICATION_CREDENTIALS.json` в корень проекта на сервер
