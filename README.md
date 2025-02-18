@@ -25,8 +25,6 @@ GOOGLE_APPLICATION_CREDENTIALS=ПУТЬ ДО CREDENRIALS.JSON
 `VK_TOKEN` - Создайте сообщество в ВК, токен можно получить в настройках сообщества в разделе `Работа с API - Ключи доступа`
 
 `PROJECT_ID` - ID проекта в Google Cloud
-![ОКНО ПРОЕКТА DialogFlow](https://github.com/user-attachments/assets/c2601dac-a070-4109-b7fb-84875902f0eb)
-
 
 `GOOGLE_APPLICATION_CREDENTIALS` - Путь до credentials.json полученный при запуске и инициализации GoogleCLI,
 
@@ -82,11 +80,11 @@ pip install -r requirements.txt
 
 Не забудьте выставить русский язык, иначе бот не будет понимать клиентов.
 
-`*СКРИН*`
+![ОКНО ПРОЕКТА DialogFlow](https://github.com/user-attachments/assets/c2601dac-a070-4109-b7fb-84875902f0eb)
 
 Натренируйте бота на нужные вам вопросы в консоли DialogFlow, в разделе Intents или с помощью скрипта `create_indent.py`
 
-`*СКРИН*`
+![ Агент Dialogflow](https://github.com/user-attachments/assets/eecad355-b98a-4244-be5c-b7ab80db4f32)
 
 
 ### Получение токена для работы с API DialogFlow
@@ -122,8 +120,6 @@ gcloud auth application-default login
 
 После вы получите файл credentials.json к себе на компьютер. 
 Папка где располагается файл с токеном будет указан в ответе утилиты
-
-`*СКРИН*`
 
 Добавьте путь до файла `application_default_credentials.json` в переменные окружения,
 переменная `GOOGLE_APPLICATION_CREDENTIALS`.
