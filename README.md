@@ -3,8 +3,9 @@
 Чат-бот для Telegram и [ВКонтакте](https://vk.com/), созданный на основе Google Dialogflow. 
 Бот использует обработку естественного языка (NLP) для понимания запросов пользователей 
 и автоматического ответа.
+![TG-BOTS](https://github.com/user-attachments/assets/41527c25-4e0a-4a8d-94f4-f2f3ed1016d6)
 
-![Uploading TG-BOTS.gif…]()
+
 
 ## Как запустить 
 
