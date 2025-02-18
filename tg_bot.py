@@ -1,7 +1,7 @@
 import logging
 
 from environs import Env
-from telegram import Update, Bot
+from telegram import Update
 from telegram.ext import (Updater, CallbackContext, CommandHandler,
                           Filters, MessageHandler)
 from telegram.error import NetworkError
@@ -73,8 +73,8 @@ def main() -> None:
     tg_handler.setFormatter(formatter)
     logger.addHandler(tg_handler)
 
-    dp.add_handler(CommandHandler("start", start))
     try:
+        dp.add_handler(CommandHandler("start", start))
         dp.add_handler(MessageHandler(Filters.text & ~Filters.command, get_response))
     except Exception as e:
         logger.error(e)
