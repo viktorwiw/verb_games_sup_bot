@@ -64,6 +64,8 @@ pip install -r requirements.txt
 
 [Как создать проект в DialogFlow](https://cloud.google.com/dialogflow/es/docs/quick/setup)
 
+![ОКНО ПРОЕКТА DialogFlow](https://github.com/user-attachments/assets/c2601dac-a070-4109-b7fb-84875902f0eb)
+
 Нам должны выдать такой идентификатор 
 
 ```
@@ -78,8 +80,6 @@ pip install -r requirements.txt
 [Для этого воспользуйтесь инструкцией](https://cloud.google.com/dialogflow/es/docs/quick/build-agent)
 
 Не забудьте выставить русский язык, иначе бот не будет понимать клиентов.
-
-![ОКНО ПРОЕКТА DialogFlow](https://github.com/user-attachments/assets/c2601dac-a070-4109-b7fb-84875902f0eb)
 
 Натренируйте бота на нужные вам вопросы в консоли DialogFlow, в разделе Intents или с помощью скрипта `create_indent.py`
 
