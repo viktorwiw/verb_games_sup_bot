@@ -23,7 +23,8 @@ GOOGLE_APPLICATION_CREDENTIALS=ПУТЬ ДО CREDENRIALS.JSON
 `VK_TOKEN` - Создайте сообщество в ВК, токен можно получить в настройках сообщества в разделе `Работа с API - Ключи доступа`
 
 `PROJECT_ID` - ID проекта в Google Cloud
-СКРИН
+![ОКНО ПРОЕКТА DialogFlow](https://github.com/user-attachments/assets/c2601dac-a070-4109-b7fb-84875902f0eb)
+
 
 `GOOGLE_APPLICATION_CREDENTIALS` - Путь до credentials.json полученный при запуске и инициализации GoogleCLI,
 
