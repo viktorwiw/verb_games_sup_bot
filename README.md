@@ -64,9 +64,8 @@ pip install -r requirements.txt
 
 [Как создать проект в DialogFlow](https://cloud.google.com/dialogflow/es/docs/quick/setup)
 
-`*СКРИН*`
-
 Нам должны выдать такой идентификатор 
+
 ```
 НАЗВАНИЕ ВАШЕГО ПРОЕКТА-211973
 ```
