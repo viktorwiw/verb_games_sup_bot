@@ -1,6 +1,7 @@
 import random
 import logging
 from logging.handlers import RotatingFileHandler
+from pathlib import Path
 
 from environs import Env
 import vk_api as vk
@@ -40,7 +41,7 @@ def main():
         "%(message)s | %(filename)s:%(lineno)d",
         datefmt="%Y-%m-%d %H:%M:%S"
     )
-    handler = RotatingFileHandler('vk_bot.log', maxBytes=10000, backupCount=2)
+    handler = RotatingFileHandler(Path(__file__).parent / 'vk_bot.log', maxBytes=10000, backupCount=2)
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
