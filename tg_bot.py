@@ -1,5 +1,6 @@
 import logging
 from logging.handlers import RotatingFileHandler
+from pathlib import Path
 
 from environs import Env
 from telegram import Update
@@ -44,7 +45,7 @@ def main() -> None:
         "%(message)s | %(filename)s:%(lineno)d",
         datefmt="%Y-%m-%d %H:%M:%S"
     )
-    handler = RotatingFileHandler('tg_bot.log', maxBytes=10000, backupCount=2)
+    handler = RotatingFileHandler(Path(__file__).parent / 'tg_bot.log', maxBytes=10000, backupCount=2)
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
