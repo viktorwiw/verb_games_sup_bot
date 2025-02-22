@@ -25,11 +25,12 @@ def get_response(event, vk_api, project_id):
             text,
             language_code
         )
-        vk_api.messages.send(
-            user_id=event.user_id,
-            message=bot_response,
-            random_id=random.randint(1,1000)
-        )
+        if bot_response:
+            vk_api.messages.send(
+                user_id=event.user_id,
+                message=bot_response,
+                random_id=random.randint(1,1000)
+            )
     except Exception as e:
         logger.exception(f'Ошибка на стороне API: {e}')
 
